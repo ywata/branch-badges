@@ -32,6 +32,8 @@ jobs:
           ${PWD}/bin/badge-maker.sh > BADGES.md
           ls -lt
           cat BADGES.md
+          perl --version
+          python --version
 
       - name: Commit the page
         run: |
