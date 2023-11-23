@@ -23,11 +23,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Generate badge page, commit and push
+      - name: Generate badge page
+        run: ${PWD}/bin/badge-maker.sh > BADGES.md
+      - name: Commit the page
         run: |
-	  ${PWD}/bin/badge-maker.sh > BADGES.md
-          git config --global user.name 'Badges automatic committer'
-          git config --global user.email 'ywatae@users.noreply.github.com'
+          git config --global user.name 'Badge Page Automatic Committer'
+          git config --global user.email 'ywata@users.noreply.github.com'
           git commit -am "Automated report"
           git push
