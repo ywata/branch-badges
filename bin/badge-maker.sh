@@ -11,6 +11,10 @@ echo <<EOF
 
 2
 
+## Badge 3
+
+3
+
 EOF
 
 
