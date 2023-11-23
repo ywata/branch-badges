@@ -24,6 +24,10 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ${PWD}/bin/badge-maker.sh > BADGES.md
-
+      - name: Generate badge page, commit and push
+        run: |
+	  ${PWD}/bin/badge-maker.sh > BADGES.md
+          git config --global user.name 'Badges automatic committer'
+          git config --global user.email 'ywatae@users.noreply.github.com'
+          git commit -am "Automated report"
+          git push
