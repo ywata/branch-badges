@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo <<EOF
+cat <<"EOF"
 # Badge pages
 
 ## Badge 1
