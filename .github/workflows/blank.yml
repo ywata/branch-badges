@@ -25,6 +25,7 @@ jobs:
 
       - name: Generate badge page
         run: ${PWD}/bin/badge-maker.sh > BADGES.md
+
       - name: Commit the page
         run: |
           git config --global user.name 'Badge Page Automatic Committer'
