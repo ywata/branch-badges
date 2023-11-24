@@ -1,4 +1,4 @@
-{repository}/actions/workflows/{workflow}/badge.svg?{branch}
+https://github.com/ywata/branch-badges/actions/workflows/blank.yml/badge.svg?badges
 # List of badges
-![][{repository}/actions/workflows/{workflow}/badge.svg?{branch}]
+![][https://github.com/ywata/branch-badges/actions/workflows/blank.yml/badge.svg?badges]
 
