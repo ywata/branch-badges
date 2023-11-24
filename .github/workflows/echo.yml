@@ -27,5 +27,5 @@ jobs:
 
       - name: Hello world
         run: |
-          echo "Hello world!"
+          ${PWD}/bin/echo.sh
 
