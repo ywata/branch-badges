@@ -31,37 +31,24 @@ def format_badge(format_str, repository, workflow, branch):
     
     return s4
 
-def generate_badge_urls(repo, wfs, brs, badge_format):
-    res = []
-    for wf in wfs:
-        br_badges = []
-        for br in brs:
+def generate_markdown(repo, wfs, brs, badge_format):
+    md = "# List of badges\n\n"
+    for br in brs:    
+        md += f"## Badges for {br} branch\n\n"
+        for wf in wfs:
             bs = br.split("/")
             badge_ref = format_badge(badge_format, repo, wf, bs[1])
-            br_badges.append((badge_ref, br))
-        res.append((br_badges, wf))
-    return (repo, res)
+            md += f"![]({badge_ref})\n"
+    return md
 
-def generate_markdown(urls):
-    (repo, urlss) = urls
-    badges = "# List of badges\n\n"
-    for (badge_ref, br) in br_badges:
-        badges += f"## Badges for {br}\n\n"
-        for (br_badges, wf) in urlss:
-#            print(f"{repo} {wf} {br} {badge_ref}")
-#            print(f"{badge_ref}")
-            badges += f"![]({badge_ref})\n"
-    return badges
 
 def main(argv):
     _program = argv[0]
-    print(argv)
 
     args = parse_args(argv[1:])
     if 'markdown' == args.command :
         branches = read_branches()
-        urls = generate_badge_urls(args.repository, args.workflows, branches, args.badge_format)
-        md = generate_markdown(urls)
+        md = generate_markdown(args.repository, args.workflows, branches, args.badge_format)
         print(md)
     
 
