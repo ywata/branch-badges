@@ -49,7 +49,7 @@ def generate_markdown(urls):
         for (badge_ref, br) in br_badges:
 #            print(f"{repo} {wf} {br} {badge_ref}")
             print(f"{badge_ref}")
-            badges += f"![][{badge_ref}]\n"
+            badges += f"![]({badge_ref})\n"
     return badges
 
 def main(argv):
