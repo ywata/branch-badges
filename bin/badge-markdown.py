@@ -21,7 +21,6 @@ def read_branches():
     res = []
     lines = sys.stdin.readlines()
     res = [s.strip() for s in lines]
-    res.reverse()
     return res
 
 def format_badge(format_str, repository, workflow, branch):
