@@ -54,6 +54,7 @@ def generate_markdown(urls):
 
 def main(argv):
     _program = argv[0]
+    print(argv)
 
     args = parse_args(argv[1:])
     if 'markdown' == args.command :
