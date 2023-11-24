@@ -2,4 +2,4 @@
 
 - sample 1
 
-![](https://github.com/ywata/branch-badges/blob/badges/BADGES.md)
+[a link](https://github.com/ywata/branch-badges/blob/badges/BADGES.md)
