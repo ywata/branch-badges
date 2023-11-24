@@ -31,7 +31,6 @@ jobs:
         run: |
           ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?{{branch}}" blank.yml > BADGES.md
           cat BADGES.md
-          exit 1
           
       - name: Commit the page
         run: |
