@@ -31,7 +31,7 @@ jobs:
       - name: Generate badge page
         run: |
           git branch -r
-          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml
+          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml
           ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml > BADGES.md
           cat BADGES.md
           
