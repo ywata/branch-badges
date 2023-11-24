@@ -29,6 +29,7 @@ jobs:
 
       - name: Generate badge page
         run: |
+          exit 1
           ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?{{branch}}" blank.yml > BADGES.md
           cat BADGES.md
           
