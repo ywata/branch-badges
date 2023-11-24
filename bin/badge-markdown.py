@@ -44,11 +44,12 @@ def generate_badge_urls(repo, wfs, brs, badge_format):
 
 def generate_markdown(urls):
     (repo, urlss) = urls
-    badges = "# List of badges\n"
-    for (br_badges, wf) in urlss:
-        for (badge_ref, br) in br_badges:
+    badges = "# List of badges\n\n"
+    for (badge_ref, br) in br_badges:
+        badges += f"## Badges for {br}\n\n"
+        for (br_badges, wf) in urlss:
 #            print(f"{repo} {wf} {br} {badge_ref}")
-            print(f"{badge_ref}")
+#            print(f"{badge_ref}")
             badges += f"![]({badge_ref})\n"
     return badges
 
