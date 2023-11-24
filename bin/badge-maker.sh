@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-cat <<"EOF"
-# Badge pages
-
-## Badge 1
-
-1
-
-## Badge 2
-
-2
-
-EOF
-
-
-
-
-
+if [ $# -gt 0 ]; then
+    git branch -r --sort=committerdate | bin/badge-markdown.py > $1
+fi    
