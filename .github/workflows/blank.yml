@@ -29,12 +29,8 @@ jobs:
 
       - name: Generate badge page
         run: |
-          ${PWD}/bin/badge-maker.sh > BADGES.md
-          ls -lt
+          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{repository}/actions/workflows/{workflow}/badge.svg?{branch}" blank.yml > BADGES.md
           cat BADGES.md
-          perl --version
-          python --version
-
           
       - name: Commit the page
         run: |
