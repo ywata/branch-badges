@@ -32,7 +32,7 @@ jobs:
         run: |
           git branch -r
           ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml
-          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml > BADGES.md
+          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml > BADGES.md
           cat BADGES.md
           
       - name: Commit the page
