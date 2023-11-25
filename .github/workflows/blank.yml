@@ -2,16 +2,13 @@
 
 name: Create Badge Page
 
+# Badge Page is updated when a new branch or tag is created.
+# on delete is removed since it will be updated next branch creation.
+
 # Controls when the workflow will run
 on:
   create
-#on:
-#  workflow_run:
-#    workflows: 
-#      - Pseudo Test
-#    branches: "**"
-#    types:
-#     - "completed"  
+  # delete  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,19 +22,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         with:
+          # checkout 'badges' branch
           ref: 'badges'
           fetch-depth: 0
 
-      - name: Generate badge page
+      - name: Generate a badge page
+        # target of displayed workflows should match project's workflow
         run: |
-          git branch -r
-          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml
-          ${PWD}/bin/badge-maker.sh https://github.com/ywata/branch-badges "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml > BADGES.md
-          cat BADGES.md
+          # bin/badge-maker.sh and bin/badge-markdown.sh are in badges branch
+          ${PWD}/bin/badge-maker.sh ${GITHUB_REPOSITORY} "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml > BADGES.md
           
       - name: Commit the page
         run: |
           git config --global user.name 'Badge Page Automatic Committer'
           git config --global user.email 'ywata@users.noreply.github.com'
           git add BADGES.md
-          ([[ `git status --porcelain` ]] && git commit -m "Update badges" && git push)  || echo "No cnages"
+          ([[ `git status --porcelain` ]] && git commit -m "Update badges" && git push)  || echo "No changes"
