@@ -28,5 +28,4 @@ jobs:
       - name: Hello world
         run: |
           ${PWD}/bin/echo.sh
-          exit 1
 
