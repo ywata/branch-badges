@@ -4,12 +4,14 @@ name: Create Badge Page
 
 # Controls when the workflow will run
 on:
-  workflow_run:
-    workflows: 
-      - Pseudo Test
-    branches: "**"
-    types:
-      - "completed"  
+  create
+#on:
+#  workflow_run:
+#    workflows: 
+#      - Pseudo Test
+#    branches: "**"
+#    types:
+#     - "completed"  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
