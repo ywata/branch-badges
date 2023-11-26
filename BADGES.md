@@ -16,6 +16,10 @@
 
 ![](https://github.com/ywata/branch-badges/actions/workflows/blank.yml/badge.svg?branch=new-dev6)
 ![](https://github.com/ywata/branch-badges/actions/workflows/echo.yml/badge.svg?branch=new-dev6)
+## Badges for origin/new-dev7 branch
+
+![](https://github.com/ywata/branch-badges/actions/workflows/blank.yml/badge.svg?branch=new-dev7)
+![](https://github.com/ywata/branch-badges/actions/workflows/echo.yml/badge.svg?branch=new-dev7)
 ## Badges for origin/dev_new4 branch
 
 ![](https://github.com/ywata/branch-badges/actions/workflows/blank.yml/badge.svg?branch=dev_new4)
