@@ -30,6 +30,7 @@ jobs:
         # target of displayed workflows should match project's workflow
         run: |
           # bin/badge-maker.sh and bin/badge-markdown.sh are in badges branch
+          echo "${GITHUB_REPOSITORY}"
           ${PWD}/bin/badge-maker.sh ${GITHUB_REPOSITORY} "{{repository}}/actions/workflows/{{workflow}}/badge.svg?branch={{branch}}" blank.yml echo.yml > BADGES.md
           
       - name: Commit the page
