@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
+import copy
 import fileinput
 import sys
 
@@ -14,7 +15,7 @@ def parse_args(argv):
     markdown_parser.add_argument('--repository', help='repository to be badged', type=str, required=True)
     markdown_parser.add_argument('--workflows', help='workflow file name in .github/workflow/', nargs='*', type=str, required=True)
     markdown_parser.add_argument('--badge-format', help='format of badge', type=str, required=True)
-    
+
     return top_parser.parse_args(argv)
 
 def read_branches():
@@ -23,13 +24,13 @@ def read_branches():
     res = [s.strip() for s in lines]
     return res
 
-def format_badge(format_str, repository, workflow, branch):
-    s1 = format_str.replace("{{repository}}", repository)
-    s2 = s1.replace("{{repository}}", repository)
-    s3 = s2.replace("{{workflow}}", workflow)
-    s4 = s3.replace("{{branch}}", branch)
+def format_badge(format, badgedic):
+    res = copy.copy(format)
+    for (key, val) in badgedic.items():
+        res = res.replace(f"{{{key}}}", val)
     
-    return s4
+    return res
+
 
 def generate_markdown(repo, wfs, brs, badge_format):
     md = "# List of badges\n\n"
@@ -37,7 +38,7 @@ def generate_markdown(repo, wfs, brs, badge_format):
         md += f"## Badges for {br} branch\n\n"
         for wf in wfs:
             bs = br.split("/")
-            badge_ref = format_badge(badge_format, repo, wf, bs[1])
+            badge_ref = format_badge(badge_format, {'repository':repo , 'workflow':wf, 'branch':bs[1]})
             md += f"![]({badge_ref})\n"
     return md
 
