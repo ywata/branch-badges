@@ -2,26 +2,30 @@
 
 ## Badges for origin/badges branch
 
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={badges})
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={badges})
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={badges})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={badges})
 ## Badges for origin/new_dev2 branch
 
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev2})
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev2})
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev2})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev2})
 ## Badges for origin/new_dev3 branch
 
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev3})
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev3})
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev3})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev3})
 ## Badges for origin/main branch
 
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={main})
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={main})
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={main})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={main})
+## Badges for origin/new_dev4 branch
+
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev4})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev4})
 ## Badges for origin/dev branch
 
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={dev})
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={dev})
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={dev})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={dev})
 ## Badges for origin/new_dev branch
 
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev})
-![]({https://github.com/ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev})
+![]({ywata/branch-badges}/actions/workflows/{blank.yml}/badge.svg?branch={new_dev})
+![]({ywata/branch-badges}/actions/workflows/{echo.yml}/badge.svg?branch={new_dev})
 
