@@ -27,7 +27,7 @@ def read_branches():
 def format_badge(format, badgedic):
     res = copy.copy(format)
     for (key, val) in badgedic.items():
-        res = res.replace(f"{{{key}}}", val)
+        res = res.replace("{{" + key + "}}", val)
     
     return res
 
